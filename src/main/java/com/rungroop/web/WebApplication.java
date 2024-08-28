@@ -14,9 +14,4 @@ public class WebApplication {
 		SpringApplication.run(WebApplication.class, args);
 	}
 
-//	@GetMapping
-//	public List<String> hi(){
-//		return List.of("Hello", "You","Person");
-//	}
-
 }
