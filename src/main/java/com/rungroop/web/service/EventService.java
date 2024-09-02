@@ -1,6 +1,7 @@
 package com.rungroop.web.service;
 
 import com.rungroop.web.dto.EventDto;
+import jakarta.validation.Valid;
 
 import java.util.List;
 
@@ -10,4 +11,8 @@ public interface EventService {
     List<EventDto> findAllEvents();
 
     EventDto findByEventId(Long eventId);
+
+    void updateEvent(EventDto eventDto);
+
+    void deleteEvent(long eventId);
 }
