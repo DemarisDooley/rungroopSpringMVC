@@ -26,6 +26,20 @@ public class ClubController {
         this.userService = userService;
     }
 
+    @GetMapping("/")
+    public String redirectToClubsHomePage(Model model){
+        UserEntity user = new UserEntity();
+        List<ClubDto> clubs = clubService.findAllClubs();
+        String username = SecurityUtil.getSessionUser();
+        if (username != null) {
+            user = userService.findByUsername(username);
+            model.addAttribute("user", user);
+        }
+        model.addAttribute("user", user);
+        model.addAttribute("clubs", clubs);
+        return "clubs-list";
+    }
+
     @GetMapping("/clubs")
     public String listClubs(Model model) {
         UserEntity user = new UserEntity();

@@ -40,7 +40,9 @@ public class EventController {
             user = userService.findByUsername(username);
             model.addAttribute("user", user);
         }
-        model.addAttribute("user", user);
+        for (EventDto event : events) {
+            model.addAttribute("club", event.getClub());
+        }
         model.addAttribute("events", events);
         return "events-list";
     }
@@ -54,7 +56,7 @@ public class EventController {
             user = userService.findByUsername(username);
             model.addAttribute("user", user);
         }
-        model.addAttribute("club", eventDto);
+        model.addAttribute("club", eventDto.getClub());
         model.addAttribute("user", user);
         model.addAttribute("event", eventDto);
         return "event-detail";
