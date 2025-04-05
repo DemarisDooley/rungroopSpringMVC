@@ -28,10 +28,7 @@
                                 </ul>
                             </li>
                         </ul>
-                        <div class="text-white ms-3">
-                            <span sec:authorize="isAuthenticated()">Hello, <span th:text="${#authentication != null ? #authentication.name : 'Guest'}">Username</span></span>
-<!--                            <span sec:authorize="!isAuthenticated()">Not Logged in</span>-->
-                        </div>
+
 
                     </div>
                 </div>
