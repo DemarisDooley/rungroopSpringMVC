@@ -1,5 +1,5 @@
 # 🏃 RunGroop - Running Clubs Web App
-A web application that allows users to create, view, and manage running clubs.
+Spring Boot web application with Postgres database that allows users to create, view, and manage running clubs. ready to run using Docker and Docker Compose.
 <img width="1440" alt="Image" src="https://github.com/user-attachments/assets/1523c8c7-5f0f-4bec-9d5b-5378a2d5c1db" />
 
 ## 🛠 Tech Stack
