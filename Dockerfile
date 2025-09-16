@@ -13,7 +13,7 @@ RUN mvn -q -e -B -DskipTests package
 FROM eclipse-temurin:17-jre
 WORKDIR /app
 
-COPY --from=build /app/target/web-0.0.1-SNAPSHOT.jar /app/app.jar
+COPY --from=build /app/target/RunningClubSpringBootApp.jar /app/app.jar
 
 EXPOSE 8080
 
